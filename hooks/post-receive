@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+
+from git import Repo
+from eaf_statistics import EafStats
+
+p = EafStats(main_tiers=['transcription'],
+    aligned_tiers=[],
+    tier_languages={'transcription': 'russian'},
+    sound_path='/data/corpus_sound/beserman_russian_corpus',
+    stats_path='/data/corpus_stats/beserman_russian_corpus')
+
+repo = Repo.init('/git/beserman_russian_corpus', bare=True)
+p.process_repo(repo)

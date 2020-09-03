@@ -1,0 +1,72 @@
+# Russian translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-09-03 11:29+0200\n"
+"PO-Revision-Date: 2020-09-03 09:34+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: templates/stats.html:4
+msgid "Title"
+msgstr "Статистика по корпусам"
+
+#: templates/stats.html:17
+msgid "Brand"
+msgstr "Бесермянские инструменты"
+
+#: templates/stats.html:33
+msgid "Stats_header"
+msgstr "Статистика по корпусам"
+
+#: templates/stats.html:34
+msgid "Stats_intro"
+msgstr ""
+"На этой странице собраны основные статистические данные по корпусам, "
+"хранящимся на workspace.beserman.ru. Они обновляются автоматически при "
+"каждом обновлении файлов в репозитории."
+
+#: templates/stats.html:42
+msgid "Total"
+msgstr "Весь корпус"
+
+#: templates/stats.html:43
+msgid "Native speakers"
+msgstr "Носители"
+
+#: templates/stats.html:48
+msgid "Tokens"
+msgstr "Словоформ"
+
+#: templates/stats.html:53
+msgid "Total duration"
+msgstr "Общая длина"
+
+#: templates/stats.html:58
+msgid "Average speed"
+msgstr "Средняя скорость (слов/час)"
+
+#: templates/stats.html:63
+msgid "Transcribed duration"
+msgstr "Общая длина сегментов с расшифровкой"
+
+#: templates/stats.html:68
+msgid "Average speed in transcribed segments"
+msgstr "Средняя скорость без учёта пауз (слов/час)"
+
+#: templates/stats.html:82
+msgid "Footer"
+msgstr "Бесермянские инструменты, 2020"
+

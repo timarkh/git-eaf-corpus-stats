@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+<head>
+	<title>{{ _('Title') }}</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Timofey Arkhangelskiy">
+	<link rel="stylesheet" type="text/css" href="static/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/stats.css">
+	<script type='text/javascript' src='static/js/jquery-3.4.1.min.js'></script>
+	<script type='text/javascript' src='static/bootstrap-4.3.1-dist/js/bootstrap.min.js'></script>
+</head>
+<body>
+	<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+		<img class="navbar-brand" src="static/img/logo1-50.png">
+		<a class="navbar-brand" href="https://workspace.beserman.ru/">{{ _('Brand') }}</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<!--
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-lg-4 ml-lg-4 mr-md-3 ml-md-3 navbar-lang">
+		<li class="nav-item active" title="Русский"><a href="" class="nav-link">RU</a><span class="sr-only">Русский (выбран)</span></li>
+		<li class="nav-item" title="Английский"><a href="" class="nav-link">EN</a><span class="sr-only">Английский</span></li>
+		</ul>
+		-->
+		</div>
+	</nav>
+	<main id="main" role="main" class="container">
+	<div class="row">
+		<div id="intro" class="col-lg-10 col-md-8 col-sm-8">
+		  <h1 class="mt-5">{{ _('Stats_header') }}</h1>
+		  <p class="lead">{{ _('Stats_intro') }}</p>
+		  <hr>
+		  {% for corpus in corpora %}
+		  <h3>{{ corpus.name }}</h3>
+		  <table class="table">
+		  	<thead class="thead-light">
+		  		<tr>
+		  			<th scope="col"></th>
+		  			<th scope="col">{{ _('Total') }}</th>
+		  			<th scope="col">{{ _('Native speakers') }}</th>
+		  		</tr>
+		  	</thead>
+		  	<tbody>
+		  		<tr>
+			  		<th scope="row">{{ _('Tokens') }}</td>
+			  		<td>{{ corpus.total_tok }}</td>
+			  		<td>{{ corpus.inf_tok }}</td>
+		  		</tr>
+		  		<tr>
+					<th scope="row">{{ _('Total duration') }}</td>
+					<td>{{ corpus.total_sound_dur_str }}</td>
+					<td>&mdash;</td>
+				</tr>
+				<tr>
+					<th scope="row">{{ _('Average speed') }}</td>
+					<td>{{ (corpus.total_tok * 3600) // corpus.total_sound_dur}}</td>
+					<td>&mdash;</td>
+				</tr>
+				<tr>
+					<th scope="row">{{ _('Transcribed duration') }}</td>
+					<td>{{ corpus.total_dur_str }}</td>
+					<td>{{ corpus.inf_dur_str }}</td>
+				</tr>
+				<tr>
+					<th scope="row">{{ _('Average speed in transcribed segments') }}</td>
+					<td>{{ (corpus.total_tok * 3600) // corpus.total_dur}}</td>
+					<td>{{ (corpus.inf_tok * 3600) // corpus.inf_dur}}</td>
+				</tr>
+			</tbody>
+		  </table>
+		  {% endfor %}
+		</div>
+	</div>
+	</main>
+
+
+	<footer class="footer">
+	  <div class="container">
+		<span class="text-muted">{{ _('Footer') }}</span></a>
+	  </div>
+	</footer>
+</body>
+</html>

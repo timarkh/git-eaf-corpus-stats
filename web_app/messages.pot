@@ -1,0 +1,67 @@
+# Translations template for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-09-03 11:29+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: templates/stats.html:4
+msgid "Title"
+msgstr ""
+
+#: templates/stats.html:17
+msgid "Brand"
+msgstr ""
+
+#: templates/stats.html:33
+msgid "Stats_header"
+msgstr ""
+
+#: templates/stats.html:34
+msgid "Stats_intro"
+msgstr ""
+
+#: templates/stats.html:42
+msgid "Total"
+msgstr ""
+
+#: templates/stats.html:43
+msgid "Native speakers"
+msgstr ""
+
+#: templates/stats.html:48
+msgid "Tokens"
+msgstr ""
+
+#: templates/stats.html:53
+msgid "Total duration"
+msgstr ""
+
+#: templates/stats.html:58
+msgid "Average speed"
+msgstr ""
+
+#: templates/stats.html:63
+msgid "Transcribed duration"
+msgstr ""
+
+#: templates/stats.html:68
+msgid "Average speed in transcribed segments"
+msgstr ""
+
+#: templates/stats.html:82
+msgid "Footer"
+msgstr ""
+
