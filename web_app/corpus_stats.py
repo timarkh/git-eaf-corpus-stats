@@ -34,12 +34,17 @@ class CorpusStats:
         Calculate statistics for each corpus based on the data read previously.
         """
         for corpus in self.corpora:
+            corpus['speakers'] = set(sp for sp in corpus['dur_by_speaker']) & set(sp for sp in corpus['tok_by_speaker'])
+
             corpus['total_sound_dur'] = 0
             if '#TOTAL_SOUND_DURATION' in corpus['dur_by_speaker']:
                 corpus['total_sound_dur'] = corpus['dur_by_speaker']['#TOTAL_SOUND_DURATION']
                 corpus['total_sound_dur_str'] = self.str_duration(corpus['total_sound_dur'])
                 del corpus['dur_by_speaker']['#TOTAL_SOUND_DURATION']
 
+            corpus['dur_by_speaker_str'] = {sp: self.str_duration(corpus['dur_by_speaker'][sp])
+                                            for sp in corpus['dur_by_speaker']}
+            
             # Total transcribed duration for all speakers
             corpus['total_dur'] = sum(corpus['dur_by_speaker'][sp]
                                       for sp in corpus['dur_by_speaker'])

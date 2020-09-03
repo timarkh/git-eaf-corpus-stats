@@ -77,3 +77,14 @@ body {
   stroke-opacity: .6;
   stroke-width: 1px;
 }
+
+
+/* Tables */
+
+caption {
+  caption-side: top;
+}
+
+#stats_by_speaker thead {
+  cursor: pointer;
+}
