@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-03 11:29+0200\n"
+"POT-Creation-Date: 2020-09-03 18:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,47 +21,67 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: templates/stats.html:17
+#: templates/stats.html:18
 msgid "Brand"
 msgstr ""
 
-#: templates/stats.html:33
+#: templates/stats.html:34
 msgid "Stats_header"
 msgstr ""
 
-#: templates/stats.html:34
+#: templates/stats.html:35
 msgid "Stats_intro"
 msgstr ""
 
-#: templates/stats.html:42
+#: templates/stats.html:41
+msgid "General information"
+msgstr ""
+
+#: templates/stats.html:45
 msgid "Total"
 msgstr ""
 
-#: templates/stats.html:43
+#: templates/stats.html:46
 msgid "Native speakers"
 msgstr ""
 
-#: templates/stats.html:48
+#: templates/stats.html:51 templates/stats.html:83
 msgid "Tokens"
 msgstr ""
 
-#: templates/stats.html:53
+#: templates/stats.html:56
 msgid "Total duration"
 msgstr ""
 
-#: templates/stats.html:58
+#: templates/stats.html:61
 msgid "Average speed"
 msgstr ""
 
-#: templates/stats.html:63
+#: templates/stats.html:66
 msgid "Transcribed duration"
 msgstr ""
 
-#: templates/stats.html:68
+#: templates/stats.html:71
 msgid "Average speed in transcribed segments"
 msgstr ""
 
+#: templates/stats.html:79
+msgid "Duration and tokens by speaker"
+msgstr ""
+
 #: templates/stats.html:82
+msgid "Speaker"
+msgstr ""
+
+#: templates/stats.html:84
+msgid "Duration"
+msgstr ""
+
+#: templates/stats.html:85
+msgid "Speed"
+msgstr ""
+
+#: templates/stats.html:107
 msgid "Footer"
 msgstr ""
 

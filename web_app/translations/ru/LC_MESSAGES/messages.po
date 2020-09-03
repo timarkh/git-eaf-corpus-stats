@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-03 11:29+0200\n"
+"POT-Creation-Date: 2020-09-03 18:52+0200\n"
 "PO-Revision-Date: 2020-09-03 09:34+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -23,50 +23,70 @@ msgstr ""
 msgid "Title"
 msgstr "Статистика по корпусам"
 
-#: templates/stats.html:17
+#: templates/stats.html:18
 msgid "Brand"
 msgstr "Бесермянские инструменты"
 
-#: templates/stats.html:33
+#: templates/stats.html:34
 msgid "Stats_header"
 msgstr "Статистика по корпусам"
 
-#: templates/stats.html:34
+#: templates/stats.html:35
 msgid "Stats_intro"
 msgstr ""
 "На этой странице собраны основные статистические данные по корпусам, "
 "хранящимся на workspace.beserman.ru. Они обновляются автоматически при "
 "каждом обновлении файлов в репозитории."
 
-#: templates/stats.html:42
+#: templates/stats.html:41
+msgid "General information"
+msgstr "Общая информация"
+
+#: templates/stats.html:45
 msgid "Total"
 msgstr "Весь корпус"
 
-#: templates/stats.html:43
+#: templates/stats.html:46
 msgid "Native speakers"
 msgstr "Носители"
 
-#: templates/stats.html:48
+#: templates/stats.html:51 templates/stats.html:83
 msgid "Tokens"
 msgstr "Словоформ"
 
-#: templates/stats.html:53
+#: templates/stats.html:56
 msgid "Total duration"
 msgstr "Общая длина"
 
-#: templates/stats.html:58
+#: templates/stats.html:61
 msgid "Average speed"
 msgstr "Средняя скорость (слов/час)"
 
-#: templates/stats.html:63
+#: templates/stats.html:66
 msgid "Transcribed duration"
 msgstr "Общая длина сегментов с расшифровкой"
 
-#: templates/stats.html:68
+#: templates/stats.html:71
 msgid "Average speed in transcribed segments"
 msgstr "Средняя скорость без учёта пауз (слов/час)"
 
+#: templates/stats.html:79
+msgid "Duration and tokens by speaker"
+msgstr "Время и словоупотребления по говорящим"
+
 #: templates/stats.html:82
+msgid "Speaker"
+msgstr "Говорящий"
+
+#: templates/stats.html:84
+msgid "Duration"
+msgstr "Время"
+
+#: templates/stats.html:85
+msgid "Speed"
+msgstr "Скорость"
+
+#: templates/stats.html:107
 msgid "Footer"
 msgstr "Бесермянские инструменты, 2020"
 
