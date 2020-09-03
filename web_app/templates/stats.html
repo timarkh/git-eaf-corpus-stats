@@ -88,10 +88,34 @@
 		  	<tbody>
 		  		{% for speaker in corpus.speakers|sort(case_sensitive=True) %}
 		  		<tr>
-			  		<td>{{ speaker }}</td>
+			  		<th scope="row">{{ speaker }}</th>
 			  		<td>{{ corpus.total_tok_by_speaker[speaker] }}</td>
 			  		<td>{{ corpus.dur_by_speaker_str[speaker] }}</td>
 			  		<td>{{ (corpus.total_tok_by_speaker[speaker] * 3600) // corpus.dur_by_speaker[speaker] }}</td>
+		  		</tr>
+		  		{% endfor %}
+			</tbody>
+		  </table>
+
+		  <table id="tokens_by_speaker" class="table tablesorter">
+		  	<caption>{{ _('Most frequent words') }}</caption>
+		  	<thead class="thead-light">
+		  		<tr>
+		  			<th scope="col">{{ _('Word') }}</th>
+		  			<th scope="col">{{ _('Total count') }}</th>
+		  			{% for speaker in corpus.informants|sort(case_sensitive=True) %}
+		  			<th scope="col">{{ speaker }}</th>
+		  			{% endfor %}
+		  		</tr>
+		  	</thead>
+		  	<tbody>
+		  		{% for token in corpus.freq_tokens %}
+		  		<tr>
+			  		<th scope="row">{{ token }}</th>
+			  		<td>{{ corpus.tok_freq[token] }}</td>
+			  		{% for speaker in corpus.informants|sort(case_sensitive=True) %}
+			  		<td>{{ corpus.tok_by_speaker[speaker][token] }}</td>
+			  		{% endfor %}
 		  		</tr>
 		  		{% endfor %}
 			</tbody>
@@ -111,6 +135,7 @@
 	<script>
 		$(function() {
 			$("#stats_by_speaker").tablesorter();
+			$("#tokens_by_speaker").tablesorter();
 		});
 	</script>
 </body>

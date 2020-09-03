@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-09-03 18:52+0200\n"
+"POT-Creation-Date: 2020-09-03 20:15+0200\n"
 "PO-Revision-Date: 2020-09-03 09:34+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -82,7 +82,19 @@ msgstr ""
 msgid "Speed"
 msgstr ""
 
-#: templates/stats.html:107
+#: templates/stats.html:101
+msgid "Most frequent words"
+msgstr ""
+
+#: templates/stats.html:104
+msgid "Word"
+msgstr ""
+
+#: templates/stats.html:105
+msgid "Total count"
+msgstr ""
+
+#: templates/stats.html:131
 msgid "Footer"
 msgstr ""
 

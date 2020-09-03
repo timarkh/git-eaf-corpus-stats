@@ -88,3 +88,13 @@ caption {
 #stats_by_speaker thead {
   cursor: pointer;
 }
+
+#tokens_by_speaker thead {
+  cursor: pointer;
+}
+
+#tokens_by_speaker {
+  overflow: auto;
+  max-height: 600px;
+  display: block;
+}
