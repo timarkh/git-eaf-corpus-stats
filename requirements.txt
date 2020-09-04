@@ -2,3 +2,6 @@
 
 Flask
 Flask-Babel
+scipy
+lxml
+GitPython

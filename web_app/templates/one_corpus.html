@@ -1,0 +1,99 @@
+<div class="card">
+	<div class="card-header" id="heading_{{ corpus.id }}">
+      <h5 class="mb-0">
+        <button class="btn btn-link btn-collapse-header" data-toggle="collapse" data-target="#collapse_{{ corpus.id }}" aria-expanded="true" aria-controls="collapse_{{ corpus.id }}">
+          {{ corpus.name }} <i class="arrow down"></i>
+        </button>
+      </h5>
+    </div>
+	
+	<div id="collapse_{{ corpus.id }}" class="collapse" aria-labelledby="heading_{{ corpus.id }}" data-parent="#corpora_accordion">
+		<div class="card-body">
+			<h3>{{ corpus.name }}</h3>
+
+			<table class="table">
+				<caption>{{ _('General information') }}</caption>
+				<thead class="thead-light">
+					<tr>
+						<th scope="col"></th>
+						<th scope="col">{{ _('Total') }}</th>
+						<th scope="col">{{ _('Native speakers') }}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row">{{ _('Tokens') }}</th>
+						<td>{{ corpus.total_tok }}</td>
+						<td>{{ corpus.inf_tok }}</td>
+					</tr>
+					<tr>
+					<th scope="row">{{ _('Total duration') }}</th>
+					<td>{{ corpus.total_sound_dur_str }}</td>
+					<td>&mdash;</td>
+				</tr>
+				<tr>
+					<th scope="row">{{ _('Average speed') }}</th>
+					<td>{{ (corpus.total_tok * 3600) // (corpus.total_sound_dur + 0.1)}}</td>
+					<td>&mdash;</td>
+				</tr>
+				<tr>
+					<th scope="row">{{ _('Transcribed duration') }}</th>
+					<td>{{ corpus.total_dur_str }}</td>
+					<td>{{ corpus.inf_dur_str }}</td>
+				</tr>
+				<tr>
+					<th scope="row">{{ _('Average speed in transcribed segments') }}</th>
+					<td>{{ (corpus.total_tok * 3600) // (corpus.total_dur + 0.1)}}</td>
+					<td>{{ (corpus.inf_tok * 3600) // (corpus.inf_dur + 0.1)}}</td>
+				</tr>
+			</tbody>
+			</table>
+
+			<table id="stats_by_speaker" class="table tablesorter">
+				<caption>{{ _('Duration and tokens by speaker') }}</caption>
+				<thead class="thead-light">
+					<tr>
+						<th scope="col">{{ _('Speaker') }}</th>
+						<th scope="col">{{ _('Tokens') }}</th>
+						<th scope="col">{{ _('Duration') }}</th>
+						<th scope="col">{{ _('Speed') }}</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for speaker in corpus.speakers|sort(case_sensitive=True) %}
+					<tr>
+						<th scope="row">{{ speaker }}</th>
+						<td>{{ corpus.total_tok_by_speaker[speaker] }}</td>
+						<td>{{ corpus.dur_by_speaker_str[speaker] }}</td>
+						<td>{{ (corpus.total_tok_by_speaker[speaker] * 3600) // (corpus.dur_by_speaker[speaker] + 0.1) }}</td>
+					</tr>
+					{% endfor %}
+			</tbody>
+			</table>
+
+			<table id="tokens_by_speaker" class="table tablesorter">
+				<caption>{{ _('Most frequent words') }}</caption>
+				<thead class="thead-light">
+					<tr>
+						<th scope="col">{{ _('Word') }}</th>
+						<th scope="col">{{ _('Total count') }}</th>
+						{% for speaker in corpus.informants|sort(case_sensitive=True) %}
+						<th scope="col">{{ speaker }}</th>
+						{% endfor %}
+					</tr>
+				</thead>
+				<tbody>
+					{% for token in corpus.freq_tokens %}
+					<tr>
+						<th scope="row">{{ token }}</th>
+						<td>{{ corpus.tok_freq[token] }}</td>
+						{% for speaker in corpus.informants|sort(case_sensitive=True) %}
+						<td>{{ corpus.tok_by_speaker[speaker][token] }}</td>
+						{% endfor %}
+					</tr>
+					{% endfor %}
+			</tbody>
+			</table>
+		</div>
+	</div>
+</div>

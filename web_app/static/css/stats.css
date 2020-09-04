@@ -78,6 +78,24 @@ body {
   stroke-width: 1px;
 }
 
+.btn-collapse-header {
+	font-size: 1em;
+}
+
+.arrow {
+	border: solid black;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 5px;
+	margin-left: 15px;
+	border-color: #888899;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  margin-bottom: 0.2em;
+}
 
 /* Tables */
 
