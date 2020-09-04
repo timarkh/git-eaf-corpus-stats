@@ -15,6 +15,11 @@ class CorpusStats:
     def __init__(self, settings):
         self.corpora = copy.deepcopy(settings)
         for corpus in self.corpora:
+            if not os.path.exists(corpus['stats_dir']):
+                corpus['name'] += ' (FOLDER DOES NOT EXIST!)'
+                corpus['dur_by_speaker'] = {'XXX': 0}
+                corpus['tok_by_speaker'] = {'XXX': {'XXX': 0}}
+                continue
             with open(os.path.join(corpus['stats_dir'], 'duration_by_speaker.json'),
                       'r', encoding='utf-8') as fIn:
                 corpus['dur_by_speaker'] = json.load(fIn)
