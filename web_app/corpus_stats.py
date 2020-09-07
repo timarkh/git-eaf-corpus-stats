@@ -97,7 +97,6 @@ class CorpusStats:
                         corpus['tok_freq'][token] += corpus['tok_by_speaker'][sp][token]
             corpus['freq_tokens'] = [token for token in sorted(corpus['tok_freq'],
                                                                key=lambda t: (-corpus['tok_freq'][t], t))][:MAX_FREQ_TOKENS]
-            print(corpus['freq_tokens'])
 
             corpus['total_dur_str'] = self.str_duration(corpus['total_dur'])
             corpus['inf_dur_str'] = self.str_duration(corpus['inf_dur'])

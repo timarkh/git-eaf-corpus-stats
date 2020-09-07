@@ -30,9 +30,9 @@ class EafStats:
         self.participants = {}  # main tier ID -> participant ID
         self.segmentTree = {}  # aID -> (contents, parent aID, tli1, tli2)
         self.segmentChildren = {}  # (aID, child tier type) -> [child aID]
-        self.corpusSettings = {'main_tiers': ["transcription"],
-                               'aligned_tiers': [],
-                               'tier_languages': {"transcription": "russian"},
+        self.corpusSettings = {'main_tiers': main_tiers,
+                               'aligned_tiers': aligned_tiers,
+                               'tier_languages': tier_languages,
                                'sound_path': sound_path,
                                'stats_path': stats_path}
         self.phraseID = 0
